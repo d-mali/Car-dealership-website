@@ -1,0 +1,321 @@
+:root {
+    --border-radius: 20px;
+    --border-radius-small: 10px;
+    --color-lightblue: rgb(221, 218, 255);
+    --color-blue: rgb(179, 171, 251);
+}
+
+nav{
+    /*padding-top: 5px;*/
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #393939;
+    color: white;
+}
+
+header {
+    background-color: rgb(179, 171, 251);
+    color: #393939;
+    padding: 2px;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 60px;
+    height: auto;
+}
+
+.tab button {
+    color: rgb(179, 171, 251);
+    background-color: inherit;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+    background-color: inherit;
+    flex-grow: 1;
+    padding: 14px 16px;
+    font-size: 12px;
+    text-align: center;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(79, 79, 79);
+    border-top: none;
+    height: 40px;
+}
+
+.tab button:not(:last-child) {
+    margin-right: 30px;
+}
+
+.tab {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    background-color: #393939;
+    width: 100%;
+    height: 65px;
+}
+
+
+.tab button:hover {
+    background-color: var(--color-lightblue);
+    box-shadow: 0 0 0 rgb(0, 0, 0);
+    color: #393939;
+    box-shadow: 0 10px 12px 0 rgba(179, 171, 251, 0.2), 0 6px 20px 0 rgba(179, 171, 251, 0.19);
+    transition: box-shadow 0.3s ease;
+}
+
+.tab button.active {
+    background-color: rgb(179, 171, 251);
+    color: #393939;
+    border: none;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #393939;
+    margin-top: 15px;
+}
+
+.custom-table td {
+    border: 1px solid #393939;
+    width: 25.0%;
+}
+
+.table-cell-left {
+    text-align: left;
+}
+
+.table-cell-right {
+    text-align: right;
+}
+
+.table-cell-center {
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#messageForm {
+    margin-top: 10px;
+}
+
+
+form label {
+    margin-top: 10px;
+}
+
+form select,
+form textarea,
+form input[type="submit"] {
+    margin-top: 5px;
+}
+
+.element-shadows {
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease;
+}
+
+.car-image {
+    width: 450px !important;
+    border-radius: var(--border-radius);
+    height: auto;
+}
+
+.car-image:hover {
+    box-shadow: 0 10px 12px 0 rgba(179, 171, 251, 0.2), 0 6px 20px 0 rgba(179, 171, 251, 0.19);
+    transition: box-shadow 0.3s ease;
+}
+
+.car-image {
+    width: 100px;
+}
+
+.car-image-large {
+    border-radius: var(--border-radius-small);
+    height: auto;
+    transition: box-shadow 0.3s ease;
+}
+
+#cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.TabHeading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-style {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.first-column {
+    width: 50%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 80%;
+}
+
+.centered-content td {
+    text-align: center;
+    vertical-align: top;
+    border: "1";
+    border-color: #393939;
+}
+
+.other-columns {
+    width: 25%;
+}
+
+.article {
+    flex: 0 1 30%;
+    margin: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+section>p {
+    color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+
+button {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: var(--border-radius-small);
+    background-color: #212121;
+    color: white;
+    padding: 1em 2em;
+}
+
+button:active {
+    background-color: var(--accent);
+    transform: scale(0.95);
+}
+
+button:hover {
+    box-shadow: 0 10px 12px 0 rgba(179, 171, 251, 0.2), 0 6px 20px 0 rgba(179, 171, 251, 0.19);
+    transition: box-shadow 0.3s ease;
+}
+
+.part-table {
+    width: 70%;
+    margin: auto;
+}
+
+.part-th, .part-table td {
+    width: 33%;
+    text-align: center;
+}
+
+
+
+
+/* The Popup */
+.popup {
+    transition: 0.3s;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #393939;
+    padding: 20px;
+    border: 1px solid rgb(179, 171, 251);
+    border-radius: var(--border-radius);
+    width: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.close {
+    color: rgb(179, 171, 251);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

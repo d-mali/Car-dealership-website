@@ -3,11 +3,13 @@
     --border-radius-small: 10px;
     --color-lightblue: rgb(221, 218, 255);
     --color-blue: rgb(179, 171, 251);
+    --color-background: #393939;
 }
 
-nav{
-    /*padding-top: 5px;*/
+nav {
+    width: 100%;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #393939;
@@ -15,8 +17,8 @@ body {
 }
 
 header {
-    background-color: rgb(179, 171, 251);
-    color: #393939;
+    background-color: var(--color-blue);
+    color: var(--color-background);
     padding: 2px;
     text-align: center;
     font-size: 0.8rem;
@@ -25,7 +27,7 @@ header {
 }
 
 .tab button {
-    color: rgb(179, 171, 251);
+    color: var(--color-blue);
     background-color: inherit;
     float: left;
     outline: none;
@@ -61,7 +63,6 @@ header {
     height: 65px;
 }
 
-
 .tab button:hover {
     background-color: var(--color-lightblue);
     box-shadow: 0 0 0 rgb(0, 0, 0);
@@ -78,35 +79,24 @@ header {
 
 .tabcontent {
     display: none;
-    padding: 6px 12px;
     border-top: none;
 }
 
-
 .custom-table {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #393939;
-    margin-top: 15px;
-}
-
-.custom-table td {
-    border: 1px solid #393939;
-    width: 25.0%;
+    border: none;
+    margin-top: 5px;
+    width: 450px
 }
 
 .table-cell-left {
+    vertical-align: top;
     text-align: left;
 }
 
 .table-cell-right {
+    vertical-align: top;
     text-align: right;
 }
-
-.table-cell-center {
-    text-align: center;
-}
-
 
 form {
     display: flex;
@@ -117,7 +107,6 @@ form {
 #messageForm {
     margin-top: 10px;
 }
-
 
 form label {
     margin-top: 10px;
@@ -156,10 +145,10 @@ form input[type="submit"] {
 }
 
 #cars {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
 }
 
 .TabHeading {
@@ -195,15 +184,15 @@ form {
     text-align: center;
     vertical-align: top;
     border: "1";
-    border-color: #393939;
+    border-color: var(--color-background);
 }
 
 .other-columns {
     width: 25%;
 }
 
-.article {
-    flex: 0 1 30%;
+article{
+    flex: 0 1 10%;
     margin: 10px;
 }
 

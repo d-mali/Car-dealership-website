@@ -1,11 +1,9 @@
-
 function openImagePopup(imageSrc) {
     var popup = document.getElementById('popupForm1');
     var popupImage = document.getElementById('popupImage');
     popupImage.src = imageSrc;
     popup.style.display = 'block';
 }
-
 
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.tab button').click();

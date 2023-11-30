@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CarDealership.css">
     <script src="CarDealership.js"></script>
-    <style></style>
 </head>
 
 <body>
@@ -17,112 +16,150 @@
     </header>
 
     <nav>
-        <div class="tab">
+        <section class="tab">
             <button class="tablinks element-shadows" onclick="openTab(event, 'Cars')">Cars</button>
             <button class="tablinks element-shadows" onclick="openTab(event, 'Parts')">Parts</button>
             <button class="tablinks element-shadows" onclick="openTab(event, 'Contacts')">Contacts</button>
-        </div>
+        </section>
     </nav>
 
-    <div id="Cars" class="tabcontent">
-        <h2 class="TabHeading">Featured Cars</h2>
-        <section id="cars">
+    <main>
 
-            <article class="article">
-                <h3>Ford Mustang Shelby</h3> <!-- Subheading for each car -->
-                <img class="car-image element-shadows" src="ford.png" alt="Ford Mustang Shelby" onclick="openImagePopup(this.src)">
-                <div id="popupForm1" class="popup">
-                    <div class="popup-content">
-                        <span class="close">&times;</span>
-                        <img class="car-image-large" id="popupImage" style="width:100%;">
-                    </div>
-                </div>
+        <section id="Cars" class="tabcontent">
+            <h2 class="TabHeading">Featured Cars</h2>
+            <section id="cars">
 
-                <p>Price: $70,000</p>
-                <a href="https://en.wikipedia.org/wiki/Shelby_Mustang">More Details</a>
-            </article>
+                <article>
+                    <h3>Ford Mustang Shelby</h3>
+                    <img class="car-image element-shadows" src="ford.png" alt="Ford Mustang Shelby" onclick="openImagePopup(this.src)">
+                    <table class="custom-table">
+                        <tr>
+                            <td class="table-cell-left">Year: 2014</td>
+                            <td class="table-cell-right" rowspan="3">
+                                <button class="openPopup element-shadows" data-popup="popupForm2">Order</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">Price: $70,000</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">
+                                <a href="https://en.wikipedia.org/wiki/Shelby_Mustang">More Details</a>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
 
-            <article class="article">
-                <h3>BMW E30</h3>
-                <img class="car-image element-shadows" src="e30.png" alt="BMW E30">
-                <table class="custom-table">
-                    <tr>
-                        <td class="table-cell-left">Year: 1990</td>
-                        <td class="table-cell-center">
-                            <button class="openPopup element-shadows" data-popup="popupForm2">Order</button>
-                            <!-- Pop-up Form -->
-                            <div id="popupForm2" class="popup">
-                                <div class="popup-content">
-                                    <span class="close">&times;</span>
-                                    <form>
-                                        <label for="name">Name:</label>
-                                        <input type="text" id="name" name="name"><br><br>
-                                        <input type="radio" id="name" name="name"><br><br>
-                                        <input type="checkbox" id="name" name="name"><br><br>
-                                        <label for="sellerSelect">Choose a Seller:</label>
-                                        <select id="sellerSelect" name="seller">
-                                            <option value="seller1">Seller 1</option>
-                                            <option value="seller2">Seller 2</option>
-                                            <option value="seller3">Seller 3</option>
-                                        </select>
-                                        <label for="messageText">Your Message:</label>
-                                        <textarea id="messageText" name="message" rows="4" cols="50"></textarea>
-                                        <label for="email">Email:</label>
-                                        <input type="email" id="email" name="email"><br>
-                                        <input type="submit" value="Submit">
-                                    </form>
-                                </div>
-                            </div>
+                <article>
+                    <h3>BMW E30</h3>
+                    <img class="car-image element-shadows" src="e30.png" alt="BMW E30" onclick="openImagePopup(this.src)">
+                    <table class="custom-table">
+                        <tr>
+                            <td class="table-cell-left">Year: 1990</td>
+                            <td class="table-cell-right" rowspan="3">
+                                <button class="openPopup element-shadows" data-popup="popupForm2">Order</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">Price: $25,000</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">
+                                <a href="https://en.wikipedia.org/wiki/BMW_3_Series_(E30)">More Details</a>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
 
-                        </td>
-                        <td class="table-cell-center">
-                            <a href="e30-details.html">More Details</a>
-                        </td>
-                        <td class="table-cell-right">$25,000</td>
-                    </tr>
-                </table>
-            </article>
+                <article>
+                    <h3>Audi A4</h3>
+                    <img class="car-image element-shadows" src="audi.png" alt="Audi A4" onclick="openImagePopup(this.src)">
+                    <table class="custom-table">
+                        <tr>
+                            <td class="table-cell-left">Year: 2021</td>
+                            <td class="table-cell-right" rowspan="3">
+                                <button class="openPopup element-shadows" data-popup="popupForm2">Order</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">Price: $40,000</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">
+                                <a href="https://lt.wikipedia.org/wiki/Audi_A4">More Details</a>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
 
-            <article class="article">
-                <h3>Audi A4</h3>
-                <img class="car-image element-shadows" src="audi.png" alt="Audi A4">
-                <p>Year: 2021</p> <!-- Adjust the year as per the actual data -->
-                <p>Price: $40,000</p> <!-- Adjust the price as per the actual data -->
-                <a href="audi-a4-details.html">More Details</a>
-            </article>
-            <article class="article">
-                <h3>Mercedes-Benz Future</h3>
-                <img class="car-image element-shadows" src="benz.png" alt="Mercedes-Benz">
-                <p>Year: 2034</p>
-                <p>Price: $10,000,000</p>
-                <a href="mercedes-details.html">More Details</a>
-            </article>
-            <article class="article">
-                <h3>Dodge Charger Cop Evader</h3>
-                <img class="car-image element-shadows" src="charger.png" alt="Dodge Charger">
-                <p>Year: 2021</p>
-                <p>Price: $35,000</p> <!-- Adjust the price as needed -->
-                <a href="dodge-charger-details.html">More Details</a> <!-- Replace with the actual link -->
-            </article>
+                <article>
+                    <h3>Mercedes-Benz Future</h3>
+                    <img class="car-image element-shadows" src="benz.png" alt="Mercedes-Benz Future" onclick="openImagePopup(this.src)">
+                    <table class="custom-table">
+                        <tr>
+                            <td class="table-cell-left">Year: 2034</td>
+                            <td class="table-cell-right" rowspan="3">
+                                <button class="openPopup element-shadows" data-popup="popupForm2">Order</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">Price: $10,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">
+                                <a href="https://en.wikipedia.org/wiki/Mercedes-Benz">More Details</a>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
 
+                <article>
+                    <h3>Dodge Charger Cop Evader</h3>
+                    <img class="car-image element-shadows" src="charger.png" alt="Dodge Charger Cop Evader" onclick="openImagePopup(this.src)">
+                    <table class="custom-table">
+                        <tr>
+                            <td class="table-cell-left">Year: 2021</td>
+                            <td class="table-cell-right" rowspan="3">
+                                <button class="openPopup element-shadows" data-popup="popupForm2">Order</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">Price: $35,000</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">
+                                <a href="https://en.wikipedia.org/wiki/Dodge_Charger">More Details</a>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
 
-            <article class="article">
-                <h3>Honda Civic Street</h3>
-                <img class="car-image element-shadows" src="civic.png" alt="Honda Civic">
-                <p>Year: 2022</p>
-                <p>Price: $22,000</p> <!-- Adjust the price as needed -->
-                <a href="honda-civic-details.html">More Details</a> <!-- Replace with the actual link -->
-            </article>
+                <article>
+                    <h3>Honda Civic Street</h3>
+                    <img class="car-image element-shadows" src="civic.png" alt="Honda Civic Street" onclick="openImagePopup(this.src)">
+                    <table class="custom-table">
+                        <tr>
+                            <td class="table-cell-left">Year: 2022</td>
+                            <td class="table-cell-right" rowspan="3">
+                                <button class="openPopup element-shadows" data-popup="popupForm2">Order</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">Price: $22,000</td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell-left">
+                                <a href="https://en.wikipedia.org/wiki/Honda_Civic">More Details</a>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
 
-
-
+            </section>
 
         </section>
 
-    </div>
-
-    <div id="Parts" class="tabcontent">
-        <section id="parts">
+        <section id="Parts" class="tabcontent">
             <h2 class="TabHeading">Available Parts</h2>
             <table class="part-table">
                 <tr>
@@ -130,35 +167,117 @@
                     <th class="part-th"><b>Model</b></th>
                     <th class="part-th"><b>Price</b></th>
                 </tr>
-                <tr><td>Front Brake Pad</td><td>E30</td><td>$35.00</td></tr>
-                <tr><td>Rear Brake Disc</td><td>Mustang</td><td>$45.20</td></tr>
-                <tr><td>Brake Caliper Kit</td><td>Audi A4</td><td>$60.30</td></tr>
-                <tr><td>Engine Timing Belt</td><td>Civic</td><td>$22.50</td></tr>
-                <tr><td>Oil Filter Element</td><td>Benz</td><td>$15.75</td></tr>
-                <tr><td>Spark Plug Set</td><td>Charger</td><td>$30.00</td></tr>
-                <tr><td>Front Suspension Coil</td><td>Prius</td><td>$40.10</td></tr>
-                <tr><td>Steering Rack Boot</td><td>Corvette</td><td>$25.60</td></tr>
-                <tr><td>Rear Shock Absorber</td><td>Camaro</td><td>$55.00</td></tr>
-                <tr><td>Alternator Assembly</td><td>Focus</td><td>$120.00</td></tr>
-                <tr><td>Starter Motor Unit</td><td>Fiesta</td><td>$70.20</td></tr>
-                <tr><td>Headlight Bulb</td><td>Explorer</td><td>$18.75</td></tr>
-                <tr><td>Front Bumper Cover</td><td>Accord</td><td>$90.00</td></tr>
-                <tr><td>Rearview Mirror Glass</td><td>Escape</td><td>$12.50</td></tr>
-                <tr><td>Door Handle Chrome</td><td>Cherokee</td><td>$17.90</td></tr>
-                <tr><td>Clutch Disc Kit</td><td>Ranger</td><td>$80.00</td></tr>
-                <tr><td>Gearbox Mounting</td><td>Pathfinder</td><td>$65.00</td></tr>
-                <tr><td>Transmission Fluid Filter</td><td>Impreza</td><td>$24.40</td></tr>
-                <tr><td>Catalytic Converter</td><td>Outback</td><td>$150.00</td></tr>
-                <tr><td>Exhaust Muffler</td><td>Rogue</td><td>$70.30</td></tr>
-                <tr><td>Exhaust Pipe Gasket</td><td>CR-V</td><td>$16.80</td></tr>
+                <tr>
+                    <td>Front Brake Pad</td>
+                    <td>E30</td>
+                    <td>$35.00</td>
+                </tr>
+                <tr>
+                    <td>Rear Brake Disc</td>
+                    <td>Mustang</td>
+                    <td>$45.20</td>
+                </tr>
+                <tr>
+                    <td>Brake Caliper Kit</td>
+                    <td>Audi A4</td>
+                    <td>$60.30</td>
+                </tr>
+                <tr>
+                    <td>Engine Timing Belt</td>
+                    <td>Civic</td>
+                    <td>$22.50</td>
+                </tr>
+                <tr>
+                    <td>Oil Filter Element</td>
+                    <td>Benz</td>
+                    <td>$15.75</td>
+                </tr>
+                <tr>
+                    <td>Spark Plug Set</td>
+                    <td>Charger</td>
+                    <td>$30.00</td>
+                </tr>
+                <tr>
+                    <td>Front Suspension Coil</td>
+                    <td>Prius</td>
+                    <td>$40.10</td>
+                </tr>
+                <tr>
+                    <td>Steering Rack Boot</td>
+                    <td>Corvette</td>
+                    <td>$25.60</td>
+                </tr>
+                <tr>
+                    <td>Rear Shock Absorber</td>
+                    <td>Camaro</td>
+                    <td>$55.00</td>
+                </tr>
+                <tr>
+                    <td>Alternator Assembly</td>
+                    <td>Focus</td>
+                    <td>$120.00</td>
+                </tr>
+                <tr>
+                    <td>Starter Motor Unit</td>
+                    <td>Fiesta</td>
+                    <td>$70.20</td>
+                </tr>
+                <tr>
+                    <td>Headlight Bulb</td>
+                    <td>Explorer</td>
+                    <td>$18.75</td>
+                </tr>
+                <tr>
+                    <td>Front Bumper Cover</td>
+                    <td>Accord</td>
+                    <td>$90.00</td>
+                </tr>
+                <tr>
+                    <td>Rearview Mirror Glass</td>
+                    <td>Escape</td>
+                    <td>$12.50</td>
+                </tr>
+                <tr>
+                    <td>Door Handle Chrome</td>
+                    <td>Cherokee</td>
+                    <td>$17.90</td>
+                </tr>
+                <tr>
+                    <td>Clutch Disc Kit</td>
+                    <td>Ranger</td>
+                    <td>$80.00</td>
+                </tr>
+                <tr>
+                    <td>Gearbox Mounting</td>
+                    <td>Pathfinder</td>
+                    <td>$65.00</td>
+                </tr>
+                <tr>
+                    <td>Transmission Fluid Filter</td>
+                    <td>Impreza</td>
+                    <td>$24.40</td>
+                </tr>
+                <tr>
+                    <td>Catalytic Converter</td>
+                    <td>Outback</td>
+                    <td>$150.00</td>
+                </tr>
+                <tr>
+                    <td>Exhaust Muffler</td>
+                    <td>Rogue</td>
+                    <td>$70.30</td>
+                </tr>
+                <tr>
+                    <td>Exhaust Pipe Gasket</td>
+                    <td>CR-V</td>
+                    <td>$16.80</td>
+                </tr>
             </table>
-            
-        </section>
-    </div>
 
-    
-    <section>
-        <div id="Contacts" class="tabcontent">
+        </section>
+
+
+        <section id="Contacts" class="tabcontent">
             <h2 class="TabHeading">Contacts</h2>
             <table class="centered-content">
                 <tr>
@@ -181,19 +300,20 @@
                     </td>
                     <td rowspan="2">
                         <h2>Contact Us</h2>
-                        <div class="form-container">
+                        <fieldset class="form-container">
                             <form action="/submit-your-form-endpoint" method="post">
                                 <label for="email">Email:</label><br>
                                 <input type="email" id="email" name="email" required><br>
-                    
+
                                 <label for="message">Message:</label><br>
                                 <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
-                    
+
                                 <input type="submit" value="Submit">
                             </form>
-                        </div>
+                        </fieldset>
+
                     </td>
-                    
+
                 </tr>
                 <tr class="other-columns">
                     <td>
@@ -204,15 +324,41 @@
                     </td>
                 </tr>
             </table>
-        </div>
-        
-    </section>
-    
-    
+        </section>
+    </main>
+
     <footer>
         <p>&copy; 2023 Luxury road wheels corporation</p>
     </footer>
 
+    <aside id="popupForm1" class="popup">
+        <aside class="popup-content">
+            <span class="close">&times;</span>
+            <img class="car-image-large" src="ford.png" id="popupImage" ald="Car image zoomed" style="width:100%;">
+        </aside>
+    </aside>
+    <aside id="popupForm2" class="popup">
+        <aside class="popup-content">
+            <span class="close">&times;</span>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <input type="radio" id="name" name="name"><br><br>
+                <input type="checkbox" id="name" name="name"><br><br>
+                <label for="sellerSelect">Choose a Seller:</label>
+                <select id="sellerSelect" name="seller">
+                    <option value="seller1">Seller 1</option>
+                    <option value="seller2">Seller 2</option>
+                    <option value="seller3">Seller 3</option>
+                </select>
+                <label for="messageText">Your Message:</label>
+                <textarea id="messageText" name="message" rows="4" cols="50"></textarea>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </aside>
+    </aside>
 </body>
 
 </html>

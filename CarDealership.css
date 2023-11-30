@@ -70,6 +70,10 @@ header {
     box-shadow: 0 10px 12px 0 rgba(179, 171, 251, 0.2), 0 6px 20px 0 rgba(179, 171, 251, 0.19);
     transition: box-shadow 0.3s ease;
 }
+p {
+    text-align: justify;
+    color: rgb(128, 128, 128);
+}
 
 .tab button.active {
     background-color: rgb(179, 171, 251);
@@ -80,6 +84,13 @@ header {
 .tabcontent {
     display: none;
     border-top: none;
+}
+
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .custom-table {
@@ -144,20 +155,17 @@ form input[type="submit"] {
     transition: box-shadow 0.3s ease;
 }
 
-#cars {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-}
 
-.TabHeading {
+
+h2{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
 
 .image-style {
     width: 100%;
@@ -223,7 +231,7 @@ table {
 table,
 th,
 td {
-    border: 1px solid black;
+    border: none;
 }
 
 @media screen and (max-width: 768px) {

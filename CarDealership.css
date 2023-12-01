@@ -28,13 +28,13 @@ header {
 
 .tab button {
     color: var(--color-blue);
+    /* t.inheri*/
     background-color: inherit;
     float: left;
     outline: none;
     cursor: pointer;
     transition: 0.3s;
     font-family: inherit;
-    background-color: inherit;
     flex-grow: 1;
     padding: 14px 16px;
     font-size: 12px;
@@ -66,13 +66,24 @@ header {
 .tab button:hover {
     background-color: var(--color-lightblue);
     box-shadow: 0 0 0 rgb(0, 0, 0);
-    color: #393939;
+    color: var(--color-background);
     box-shadow: 0 10px 12px 0 rgba(179, 171, 251, 0.2), 0 6px 20px 0 rgba(179, 171, 251, 0.19);
     transition: box-shadow 0.3s ease;
 }
+
+/* t.descendant*/
+section ul li {
+    text-decoration: underline;
+}
+
 p {
     text-align: justify;
     color: rgb(128, 128, 128);
+}
+
+/* t.Child */
+body > footer > p {
+    color: var(--color-lightblue)
 }
 
 .tab button.active {
@@ -93,11 +104,6 @@ p {
     align-items: flex-start;
 }
 
-.custom-table {
-    border: none;
-    margin-top: 5px;
-    width: 450px
-}
 
 .table-cell-left {
     vertical-align: top;
@@ -123,10 +129,11 @@ form label {
     margin-top: 10px;
 }
 
-form select,
-form textarea,
+/* t.attribute*/
 form input[type="submit"] {
     margin-top: 5px;
+    background-color: var(--color-blue);
+    color: white;
 }
 
 .element-shadows {
@@ -149,13 +156,16 @@ form input[type="submit"] {
     width: 100px;
 }
 
+/* t.id */
+#CEO {
+    color: var(--color-blue);
+}
+
 .car-image-large {
     border-radius: var(--border-radius-small);
     height: auto;
     transition: box-shadow 0.3s ease;
 }
-
-
 
 h2{
     width: 100%;
@@ -191,53 +201,47 @@ form {
 .centered-content td {
     text-align: center;
     vertical-align: top;
-    border: "1";
+    border: 1;
     border-color: var(--color-background);
 }
 
+table {
+    /* t.important */
+    color: white !important;    
+    border-collapse: collapse;
+}
+
+
+table.custom-table {
+    border: none;
+    margin-top: 5px;
+    width: 450px;
+    color: red;
+    background-color: var(--color-background);
+}
+
 .other-columns {
+    vertical-align: top !important;
     width: 25%;
 }
 
-article{
+article {
     flex: 0 1 10%;
     margin: 10px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-section>p {
+section > p {
     color: #555;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.sidebar {
+    width: 250px;
+    float: left;
 }
-
-table,
-th,
-td {
-    border: none;
-}
-
-@media screen and (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 5px;
+/* t.media */
+@media screen and (max-width: 600px) {
+    header {
+        display: none;
     }
 }
 
@@ -272,10 +276,6 @@ button:hover {
     text-align: center;
 }
 
-
-
-
-/* The Popup */
 .popup {
     transition: 0.3s;
     display: none;
